@@ -1,0 +1,32 @@
+.country-card {
+  display: flex;
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  box-shadow: gray;
+}
+
+.country-flag {
+  background-clip: padding-box;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.country-result {
+  width: 200px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.country-name {
+  padding: 10px;
+  color: blue;
+  font-size: 40px;
+}
+
+.input-search {
+  padding: 20px 0 0 20px;
+}
