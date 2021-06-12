@@ -22,7 +22,7 @@ function renderQueryMarkup(evt) {
             
          if(data.length === 1) {
                renderCountryMarkup(data)
-            } else if (data.length > 1 && data.length < 10){
+            } else if (data.length > 1 && data.length <= 10){
                renderCountriesMarkup(data)
             } else {
              error({
