@@ -12,10 +12,11 @@ const queryMarkupRef = document.querySelector('.query-result')
 inputRef.addEventListener('input', _debounce(renderQueryMarkup, 500));
 
 function renderQueryMarkup(evt) {
-    const query = evt.target.value;
+   const countryName = evt.target.value.trim();
+   if (countryName.length === 0) return clearCountriesMarkUp();
     clearCountriesMarkUp()
 
-    fetchCountries(query)
+    fetchCountries(countryName)
         .then(data => {
             console.log(data.length)
             
@@ -36,9 +37,9 @@ function renderCountryMarkup(data) {
 }
 
 function renderCountriesMarkup(data) {
-      queryMarkupRef.innerHTML = countriesListTpl(data)
+   queryMarkupRef.innerHTML = countriesListTpl(data)
 }
 
 function clearCountriesMarkUp() {
-  queryMarkupRef.innerHTML = '';
+   queryMarkupRef.innerHTML = '';
 }
